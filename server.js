@@ -11,7 +11,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const hbs = exphbs.create({ helpers });
 
 const { strict } = require("assert");
-const routes = require("./controllers");
+const routes = require("./routes");
 const sequelize = require("./config/connection");
 
 const app = express();
