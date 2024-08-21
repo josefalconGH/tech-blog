@@ -1,0 +1,290 @@
+:root {
+  --primary: #dfdfdf;
+  --secondary: #131023;
+  --tertiary: #a7a7a7;
+}
+
+*,
+*::before,
+*::after {
+  color: var(--secondary);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--primary);
+}
+
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-inline: 1em;
+  margin-top: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Login CSS */
+.login-form-container {
+  width: 75%;
+  border: solid 2px var(--secondary);
+  height: max-content;
+  margin-inline: auto;
+  padding-bottom: 1.5em;
+}
+
+.login-form-container > h2 {
+  background: var(--secondary);
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  color: var(--primary);
+}
+
+.login-form-container > form {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.login-form-container > form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.login-form-container > form > div > label {
+  font-size: 1.25em;
+}
+
+.login-form-container > form > div > input {
+  border: none;
+  height: 2em;
+  font-size: 1.25em;
+  padding-inline: 0.5em;
+}
+
+.login-form-container > form > div > button[type="submit"] {
+  height: 2em;
+  border: none;
+  background: var(--tertiary);
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.login-form-container > a {
+  font-size: 1.25em;
+  padding-left: 2em;
+}
+
+/* Blogs CSS */
+#post-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.post-preview {
+  border: solid 2px var(--secondary);
+  width: 100%;
+  min-height: 150px;
+  cursor: pointer;
+}
+
+.post-preview .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary);
+  color: var(--primary);
+  font-size: 0.85em;
+  padding: 0.5em 1em;
+}
+
+.post-preview .header > h2,
+.post-preview .header > h3 {
+  color: var(--primary);
+}
+
+.post-preview .header > h3 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.post-preview .content {
+  padding: 0.75em;
+}
+
+/* Dash CSS */
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+#dashboard > #new-post {
+  align-items: center;
+  background: var(--secondary);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 2em;
+  justify-content: center;
+  padding-inline: 1em;
+  width: fit-content;
+}
+
+#dashboard > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+#dashboard > ul a {
+  align-items: center;
+  background: var(--secondary);
+  border-radius: 5px;
+  display: flex;
+  font-size: 1.25em;
+  justify-content: space-between;
+  padding: 0.75em 1em;
+}
+
+#dashboard > ul a > h4,
+#dashboard > ul a > h5 {
+  color: white;
+}
+
+/* New BLog CSS */
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  border: solid 2px var(--secondary);
+  padding-bottom: 20px;
+  height: max-content;
+}
+
+.blog-form > h3 {
+  font-size: 1.3em;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.25em 1em;
+}
+
+.blog-form > .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-inline: 1em;
+}
+
+.blog-form > .form-group > label {
+  font-size: 1.25em;
+}
+
+.blog-form > .form-group > input {
+  height: 2.25em;
+  font-size: 1em;
+}
+
+.blog-form > .form-group > textarea {
+  height: 4em;
+  padding-block: 0.5em;
+}
+
+.blog-form > .form-group > input,
+.blog-form > .form-group > textarea {
+  padding-inline: 0.5em;
+}
+
+.blog-form > button {
+  background: var(--secondary);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+  height: 2em;
+  margin-inline: 1em;
+}
+
+/* Blog CSS */
+#blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+#blog-container > #comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+#blog-container > #comments-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border: solid 2px var(--secondary);
+}
+
+#blog-container > #comments-list > li > h3 {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.25em 0.5em;
+}
+
+#blog-container > #comments-list > li > div {
+  padding: 0.25em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-block: 1em;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768) {
+  main {
+    margin-inline: 4em;
+  }
+}
