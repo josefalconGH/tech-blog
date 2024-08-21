@@ -1,9 +1,9 @@
 // Purpose: Seed the database with test data
 const sequelize = require("../config/connection");
-const { User, Post } = require("../models");
+const { User, Blog } = require("../models");
 
-const userSeedData = require("./usersSeedData.json");
-const postSeedData = require("./postsSeedData.json");
+const userSeedData = require("./userSeed.json");
+const blogSeedData = require("./blogSeed.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -11,7 +11,7 @@ const seedDatabase = async () => {
 
   await User.bulkCreate(userSeedData, { individualHooks: true });
   console.log("----------- DONE SEEDING USERS -----------");
-  await Post.bulkCreate(postSeedData);
+  await Blog.bulkCreate(blogSeedData);
   console.log(
     "----------- DONE SEEDING POSTS -----------",
     "\n----------- SEEDING COMPLETED -----------"
